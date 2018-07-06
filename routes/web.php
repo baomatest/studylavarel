@@ -28,4 +28,4 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/abc','menuinsertcontroller@index');
+Route::get('/createmenu','menucreatecontroller@index')->name('home');;

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class menuinsertcontroller extends Controller
+class menucreatecontroller extends Controller
 {
     //
     public function __construct()
@@ -17,7 +17,7 @@ class menuinsertcontroller extends Controller
     public function index()
     {
 
-      return view('stud_create');
+      return view('menu_create');
 
     }
 }
