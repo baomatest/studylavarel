@@ -21,10 +21,18 @@ class Menucontroller extends Controller
   foreach ($mot as $one);
   if ($one->vi)
   {
-  echo DB::insert('insert into menu (id,ten, slug,vitri) values (?, ?,?,?)', [NULL, $name1,$name2,(int)$one->vi+1]);
+  if( DB::insert('insert into menu (id,ten, slug,vitri) values (?, ?,?,?)', [NULL, $name1,$name2,(int)$one->vi+1]))
+   echo "<script>alert('Thêm chỉ mục thành công !')</script>";
+   else {
+     echo "<script>alert('Không thành công !')</script>";
+   }
   }
   else {
-  echo DB::insert('insert into menu (id,ten, slug,vitri) values (?, ?,?,?)', [NULL, $name1,$name2,1]);
+  if(DB::insert('insert into menu (id,ten, slug,vitri) values (?, ?,?,?)', [NULL, $name1,$name2,1]))
+  echo "<script>alert('Thêm chỉ mục thành công !')</script>";
+  else {
+    echo "<script>alert('Không thành công !</script>')";
+  }
 }
 return view('menu_create');
   }
