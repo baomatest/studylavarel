@@ -28,4 +28,5 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/createmenu','menucreatecontroller@index')->name('home');;
+Route::get('/cm','Menucontroller@Guicreate');
+Route::post('/cm','Menucontroller@create');

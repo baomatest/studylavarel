@@ -2,79 +2,37 @@
 
 @section('content')
 <div class="container">
-  <div class="row">
-    <div class="col-sm-4 border  border-top-0 border-right-0">
-      <div >
-        <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#home">Danh mục</a>
-    </li>
-
-  </ul>
-
-</br>
-<div class="d-flex">
-<div class="p-2">
-  <div class="btn-group">
-  <button type="button" class="btn btn-primary">Thêm</button>
-  <button type="button" class="btn btn-warning">Sửa</button>
-  <button type="button" class="btn btn-danger">Xóa</button>
-  <button type="button" class="btn btn-info">Làm mới</button>
-</div>
-</div>
-</div>
-</br>
-  eerererer
-  eerererer
-</br>
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">{{ __('Tạo chỉ mục') }}</div>
+      <div class="card-body">
+        <form method="post" action="/cm">
+          <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
+          <div class="form-group row">
+              <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Tên chỉ mục :') }}</label>
+              <div class="col-md-6">
+                  <input name="name1" id="name" type="text" class="form-control">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="nameurl2" class="col-md-4 col-form-label text-md-right">{{ __('Tên không dấu :') }}</label>
+              <div class="col-md-6">
+                  <input name="nameurl" id="nameurl" type="text" class="form-control" >
+              </div>
+          </div>
+          <div class="form-group row mb-0">
+              <div class="col-md-6 offset-md-4">
+                  <button type="submit" class="btn btn-primary">
+                      {{ __('Tạo chỉ mục') }}
+                  </button>
+              </div>
+          </div>
+        </form>
       </div>
-
-    </div>
-
-    <div class="col-sm-8 border  border-top-0">
-      <div >
-
-        <ul class="nav nav-tabs" role="tablist">
-
-            <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#home">Sản phẩm</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#menu1">Bài viết</a>
-            </li>
-
-  </ul>
-
-
-</br>
-
-<div class="d-flex">
-<div class="p-2">
-  <div class="btn-group">
-    <button type="button" class="btn btn-primary">Thêm</button>
-    <button type="button" class="btn btn-warning">Sửa</button>
-    <button type="button" class="btn btn-danger">Xóa</button>
-    <button type="button" class="btn btn-info">Làm mới</button>
-</div>
-</div>
-<div class="p-2 ml-auto">
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Tìm kiếm tên sản phẩm">
-    <div class="input-group-append">
-      <button class="btn btn-primary" type="submit">Tìm</button>
     </div>
   </div>
 </div>
-</div>
-</br>
-  eerererer
-  eerererer
-</br>
-      </div>
-
-    </div>
-  </div>
-
 
 </div>
 @endsection

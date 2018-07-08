@@ -16,7 +16,7 @@
 <div class="d-flex">
 <div class="p-2">
   <div class="btn-group">
-  <button type="button" class="btn btn-primary">Thêm</button>
+  <button type="button" onclick="cm()" class="btn btn-primary">Thêm</button>
   <button type="button" class="btn btn-warning">Sửa</button>
   <button type="button" class="btn btn-danger">Xóa</button>
   <button type="button" class="btn btn-info">Làm mới</button>
